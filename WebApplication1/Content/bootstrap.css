@@ -136,7 +136,14 @@ sub {
 }
 
 img {
+  width: 100%;
+  height: auto;
+  max-width: %;
   border: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 svg:not(:root) {
@@ -362,7 +369,7 @@ img {
 }
 
 .img-rounded {
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 .img-thumbnail {

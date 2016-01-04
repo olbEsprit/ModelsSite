@@ -1,13 +1,21 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    background: #f00 url('/imgs/4.jpg') center top;
+    background-repeat:repeat;
+    background-attachment:fixed;
+    background-size: 100% auto;
+
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -27,7 +35,7 @@ textarea {
 .bg-img {
     background: #f00 url('/imgs/2.jpg') no-repeat center top;
     background-size: 100% auto;
-    border-radius: 10px;
+    border-radius: 6px;
 }
 
 .text-left {
@@ -60,4 +68,10 @@ textarea {
 .btn-danger{
     border: 0px;
     font-size: 24px;
+}
+
+.img
+{
+
+
 }
