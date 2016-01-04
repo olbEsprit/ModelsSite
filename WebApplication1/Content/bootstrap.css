@@ -138,7 +138,7 @@ sub {
 img {
   width: 100%;
   height: auto;
-  max-width: %;
+  max-width: 100%;
   border: 0;
   padding-bottom: 5px;
   padding-top: 5px;
