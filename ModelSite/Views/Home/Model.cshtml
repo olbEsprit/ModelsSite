@@ -1,0 +1,102 @@
+﻿@model ModelSite.Models.JoinViewModel
+
+@{
+    ViewBag.Title = "Model";
+}
+
+<h2>Model</h2>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bL_T4Lr0uu8"></iframe>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-7">
+        <img src="~/Content/imgs/1.jpg" class="img-rounded" />
+    </div>
+    <div class="col-md-5">
+        <h2>Ut enim ad minima</h2>
+        <h4>
+            At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+        </h4>
+    </div>
+</div>
+
+<h3 class="litle-black-header-center">Ut enim ad minim veniam, quis nostrud exercitation ullamco</h3>
+
+<div class="row">
+    <div class="col-lg-7">
+       
+@using (Html.BeginForm("Model", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{  
+            <div class="form-horizontal">
+                <h3>Заполни форму</h3>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                        @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                    
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Height, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(m => m.Height, "", new { @class = "text-danger" })
+                        @Html.EditorFor(m => m.Height, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Age, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(m => m.Age, "", new { @class = "text-danger" })
+                        @Html.EditorFor(m => m.Age, new { htmlAttributes = new { @class = "form-control" } })
+                    </div> 
+                </div>               
+
+                <div class="form-group">
+                     @Html.LabelFor(m => m.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+                        @Html.EditorFor(m => m.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>      
+                </div>
+
+                <div class="form-group">
+                   @Html.LabelFor(m => m.Mail, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.ValidationMessageFor(m => m.Mail, "", new { @class = "text-danger" })
+                        @Html.EditorFor(m => m.Mail, new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                
+
+                
+                <span><b>Прикрепи две фотографии.</b></span>
+                <span class="help-block">В полный рост:</span>
+                <span class="text-danger">@Html.ViewBag.FirstPhotoError</span>
+                @Html.TextBoxFor(model => model.FullPhoto, new { type = "file", name = "Full", accept = ".jpg,.png,.jpeg,.gif" })
+                
+                <span class="help-block">До плечей:</span>
+                <span class="text-danger">@Html.ViewBag.SecondPhotoError</span>
+                @Html.TextBoxFor(model => model.HalfPhoto, new { type = "file", name = "Half", accept = ".jpg,.png,.jpeg,.gif" })
+
+                <!--<input type="file" name="files" value="" multiple="multiple" />-->
+
+                <br /><button type="submit" class="btn btn-success btn-lg">Отправить</button>
+
+           </div>
+                
+                
+                
+                }
+  </div>
+    <div class="col-lg-5">
+        <img src="~/Content/imgs/3.jpg" class="img-rounded" />
+    </div>
+</div>
